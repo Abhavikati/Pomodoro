@@ -31,8 +31,8 @@ def start_timer():
     reps += 1
 
     work_sec = WORK_MIN * 60
-    short_break_sec = SHORT_BREAK_MIN + 60
-    long_break_sec = LONG_BREAK_MIN + 60
+    short_break_sec = SHORT_BREAK_MIN * 60
+    long_break_sec = LONG_BREAK_MIN * 60
 
     if reps % 8 == 0:
         countdown(long_break_sec)
@@ -60,7 +60,7 @@ def countdown(count):
         mark = ""
         for i in range(math.floor(reps / 2)):
             mark += "〥"
-        checkmark.config(text="marks")
+        checkmark.config(text=mark)
 
 # ---------------------------- UI SETUP ------------------------------- #
 
